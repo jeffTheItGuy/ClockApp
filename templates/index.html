@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stopwatch1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stopwatch2.css') }}">
+    
+</head> 
+
+<body>
+    <div class="stopwatch">
+        <div id="time" class="time">00:00:00</div>
+        <button id="continue-pause" class="button">Continue</button>
+        <button id="save" class="button">Save</button>
+    </div>
+
+    <div class="stopwatch2">
+        <div id="time2" class="time2">00:00:00</div>
+    </div> 
+
+    <script src="{{ url_for('static', filename='stopwatch.js') }}"></script>
+
+</body>
+</html>
+
+    
+   
