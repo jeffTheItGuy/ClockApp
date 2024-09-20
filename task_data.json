@@ -10,5 +10,24 @@
     {
         "task": "wqadsa",
         "time": "00:00:10"
+    },
+    {
+        "task": "test assessment",
+        "time": "00:40:47"
+    },
+    {
+        "task": "server issues",
+        "time": "00:00:06"
+    },
+    {
+        "task": "first task",
+        "time": "00:00:06",
+        "idle": "00:00:06"
+    },
+    {
+        "task": "9ghy9",
+        "time": "00:00:06",
+        "idle": "00:00:06",
+        "date": "20/09/2024"
     }
 ]

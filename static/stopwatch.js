@@ -13,6 +13,7 @@ const timeDisplay1 = document.getElementById('time');
 const timeDisplay2 = document.getElementById('time2');
 const continuePauseButton = document.getElementById('continue-pause');
 const saveButton = document.getElementById('save');
+const resetButton = document.getElementById('reset');
 
 // Storage for saved times and tasks
 let taskRecords = [];
@@ -68,15 +69,22 @@ function pauseStopwatch2() {
 // Save the time of Stopwatch 1 and prompt for a task name
 function save() {
     const savedTime = timeDisplay1.textContent;
+    const savedTime2 = timeDisplay1.textContent;
     
     // Prompt user for task name
     const taskName = prompt('Enter task name:');
     
     if (taskName) {
+
+        // Add a date
+        const currentDate = new Date().toLocaleDateString();
+
         // Create a taskRecord object
         const taskRecord = {
             task: taskName,
-            time: savedTime
+            time: savedTime,
+            idle: savedTime2,
+            date: currentDate
         };
 
         // Send taskRecord to Flask backend using a POST request
@@ -100,16 +108,37 @@ function save() {
     }
 }
 
-// Initialize Stopwatches
-function initializeStopwatches() {
-    continuePause();
+
+
+// Reset the stopwatches
+function resetStopwatches() {
+    clearInterval(timer1);
+    clearInterval(timer2);
+
+
+    elapsedTime1 = 0;
+    elapsedTime2 = 0;
+
+
+    timeDisplay1.textContent = '00:00:00';
+    timeDisplay2.textContent = '00:00:00';
+
+
+    isRunning1 = false;
+    isRunning2 = false;
+
+ 
+    continuePauseButton.textContent = 'Continue';
 }
+
 
 // Add event listeners
 continuePauseButton.addEventListener('click', continuePause);
 saveButton.addEventListener('click', save);
+resetButton.addEventListener('click', resetStopwatches);
 
-// Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initializeStopwatches);
+
+
+
 
 
