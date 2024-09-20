@@ -14,6 +14,7 @@ const timeDisplay2 = document.getElementById('time2');
 const continuePauseButton = document.getElementById('continue-pause');
 const saveButton = document.getElementById('save');
 const resetButton = document.getElementById('reset');
+const shutdownButton = document.getElementById('shutdown');
 
 // Storage for saved times and tasks
 let taskRecords = [];
@@ -139,6 +140,18 @@ resetButton.addEventListener('click', resetStopwatches);
 
 
 
+ 
+
+function shutdownApp() {
+
+    fetch('/shutdown', { method: 'POST' })
+    
+                window.close();
+           
+       
+}
+
+shutdownButton.addEventListener('click', shutdownApp);
 
 
 

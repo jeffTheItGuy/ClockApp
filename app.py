@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 import json
 import os
+import subprocess
 
 
 app = Flask(__name__)
@@ -43,6 +44,17 @@ def save_task():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+   # Execute the shell script and capture output
+    result = subprocess.run(['bash', 'clockstop.sh'], capture_output=True, text=True)
+    
+    # Check if script executed successfully
+    if result.returncode == 0:
+        return f"Script executed successfully:\n{result.stdout}"
+    else:
+        return f"Script failed with error:\n{result.stderr}", 500
 
 if __name__ == '__main__':
     app.run(debug=True)

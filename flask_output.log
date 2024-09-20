@@ -1,0 +1,20 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-958-355
+127.0.0.1 - - [20/Sep/2024 02:22:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch1.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch2.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch1.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:22:45] "[36mGET /static/stopwatch2.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:23:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Sep/2024 02:23:10] "[36mGET /static/stopwatch1.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:23:10] "[36mGET /static/stopwatch2.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [20/Sep/2024 02:23:10] "[36mGET /static/stopwatch.js HTTP/1.1[0m" 304 -
